@@ -1,3 +1,7 @@
+# Get all Compartments
+$Compartments = Get-OCIIdentityCompartmentsList -CompartmentId "OCID" -CompartmentIdInSubtree $true -LifecycleState Active
+
+# Loop through each Compartment, identify each VM instance within and then STOP / START VM instance
 Foreach ($Compartment in $Compartments) 
 {
 Write-Host "Compartment Name:" $Compartment.Name -ForegroundColor Green
