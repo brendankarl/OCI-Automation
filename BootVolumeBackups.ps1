@@ -1,5 +1,5 @@
 # Get all Compartments
-$Compartments = Get-OCIIdentityCompartmentsList -CompartmentId "ocid1.tenancy.oc1..aaaaaaaae" -CompartmentIdInSubtree $true -LifecycleState Active
+$Compartments = Get-OCIIdentityCompartmentsList -CompartmentId "OCID" -CompartmentIdInSubtree $true -LifecycleState Active
 
 # Loop through each Compartment, identify each VM boot volume and output the assigned backup policy
 Foreach ($Compartment in $Compartments) 
